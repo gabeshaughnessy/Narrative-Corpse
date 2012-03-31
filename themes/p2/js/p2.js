@@ -197,10 +197,12 @@ function getPosts(showNotification){
 					newUpdatesLi = newUpdatesLi.next();
 				} else {
 					newUpdatesLi.before(newPosts.html);
+					newUpdatesLi.hide('slow');
 					newUpdatesLi = newUpdatesLi.prev();
+					
 				}
 
-				newUpdatesLi.hide().slideDown(200, function() {
+				newUpdatesLi.hide().slideDown('fast', function() {
 					$(this).addClass('newupdates');
 				});
 
